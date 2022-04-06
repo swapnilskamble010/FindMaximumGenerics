@@ -1,6 +1,14 @@
 package findmaximumgeneric;
 
-public class FindMaximum {
+public class FindMaximum<T extends Comparable<T>> {
+	T x, y, z;
+	
+	public FindMaximum(T x, T y, T z) {
+		this.x = x;
+		this.y = y;
+		this.z = z;
+		findMax(x, y, z);
+	}
 	
 	public <T extends Comparable<T>> void findMax(T x, T y, T z) {
 		T max = x;
